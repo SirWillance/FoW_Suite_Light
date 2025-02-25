@@ -12,9 +12,9 @@ class ShotAgent(AgentNode):
     
     RETURN_NAMES = (f"{TYPE_NAME} Conditioning", f"{TYPE_NAME} Text", )  # No spaces in return names   
     DESCRIPTION =	 """Camera and composition guide for image generation.
-			Access a curated collection of cinematic shots, angles, and composition styles.
-			Examples: 'extreme close-up', 'birds-eye view', 'Dutch angle', etc.
-			Use the widget to explore and select professional camera techniques."""
+Access a curated collection of cinematic shots, angles, and composition styles.
+Examples: 'extreme close-up', 'birds-eye view', 'Dutch angle', etc.
+Use the widget to explore and select professional camera techniques."""
 
 
 

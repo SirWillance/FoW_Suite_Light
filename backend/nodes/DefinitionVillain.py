@@ -10,7 +10,7 @@ NODE_EMOJI = "👺"
 class DefinitionVillain(VillainNode):
     """Definition Villain node for FoW Suite."""
     
-    DESCRIPTION = "The Definition Villain fights against unwanted visual elements."
+    DESCRIPTION = "The Definition Villain Villain fights against unwanted visual elements—your guild’s shield in Light tier, no customization (Pro/Ultimate only)."
     RETURN_NAMES = (f"{TYPE_NAME} Conditioning", f"{TYPE_NAME} Text", )  # No spaces in return names
 
 

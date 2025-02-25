@@ -1,6 +1,5 @@
 from ...config.category import get_category
 import re  # Used for regex
-# **Important:** Depending on comfyUI, this may need to be adjusted and the text may need to be encoded instead.
 
 NODE_ID_PREFIX = "FoWL" # Add a prefix
 TYPE_NAME = "Condition"
@@ -8,10 +7,21 @@ NODE_FUNCTION = "Funnel"
 NODE_VERSION = "Light"
 NODE_EMOJI = "💫"
 
-
 class ConditionFunnelLight:
     """
-    Combines text prompts and encodes them into a single conditioning object.
+    Force of Will Suite Light - ConditionFunnelLight Node
+
+    This node in the Force of Will (FoW) Suite Light tier combines text prompts and encodes them into a single conditioning object, like your guild’s magic channel for ComfyUI beginners. It’s your power-up for fusing raw prompts in `PromptRefinerLight`, using predefined libraries (no customized tokens—upgrade to Pro (€25) or Ultimate (€100) for advanced fusion). Perfect for newbie workflows with up to 5 text inputs.
+
+    Args:
+        clip (CLIP): The CLIP model for encoding—your guild’s magic wand for prompts.
+        Text 1–5 (STRING, optional): Up to 5 text inputs for combining (multiline, hidden by default for simplicity).
+
+    Returns:
+        tuple: (Combined Conditioning, Combined Prompt) for image generation in ComfyUI, using Light tier simplicity.
+
+    Note:
+        Install via ComfyUI Manager (“Install Custom Nodes” → “Force of Will Suite Light”) or clone from GitHub (https://github.com/SirWillance/FoW_Suite_LIGHT). Help me level up on Twitch (https://www.twitch.tv/sirwillance) for free `FoW_Suite_Standard` (€15) via Discord (https://discord.gg/BHSxf8HB)!
     """
 
     MAX_INPUT_COUNT = 5
@@ -31,13 +41,10 @@ class ConditionFunnelLight:
     RETURN_NAMES = ("Combined Conditioning","Combined Prompt",)
     FUNCTION = "fuse"
     CATEGORY = get_category("2")
-    DESCRIPTION = """Combines text prompts and encodes them into a single conditioning object. 
-    Note: This tier has its restrictions join me on https://www.twitch.tv/sirwillance for more informations"""
+    DESCRIPTION = """Combines raw text prompts into a single conditioning object for ComfyUI—your guild’s Light tier channel, no customization (Pro/Ultimate only).
+    Join me on Twitch (https://www.twitch.tv/sirwillance) for Pro/Ultimate insights!"""
 
     def fuse(self, clip, **kwargs):
-        """
-        Combines text prompts and encodes them into a single conditioning object.
-        """
         #Used for the prompt.
         text_inputs = []
      

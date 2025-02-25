@@ -4,7 +4,7 @@ NODE_ID_PREFIX = "FoWL" # Add a prefix
 TYPE_NAME = "Static"
 NODE_FUNCTION = "Weight"
 NODE_VERSION = "Light"
-NODE_EMOJI = "🔍"
+NODE_EMOJI = "💀"
 
 class StaticWeight(WeightNode):
     pass

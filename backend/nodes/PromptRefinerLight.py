@@ -29,7 +29,7 @@ class PromptRefinerLight:
     RETURN_TYPES = ("CONDITIONING", "CONDITIONING", "STRING", "STRING")
     RETURN_NAMES = ("Positive Conditioning", "Negative Conditioning", "Combined Positive Prompt", "Combined Negative Prompt")
     FUNCTION = "fuse"  # The main function to execute
-    DESCRIPTION = """Refines prompts for image generation."""
+    DESCRIPTION = """Defines raw prompts—Light tier simplicity, no customization (Pro/Ultimate only)."""
 
     @classmethod
     def INPUT_TYPES(cls):

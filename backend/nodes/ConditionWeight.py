@@ -2,7 +2,7 @@ from .base_weight import WeightNode
 
 NODE_ID_PREFIX = "FoWL" # Add a prefix
 TYPE_NAME = "Condition"
-NODE_FUNCTION = "Funnel"
+NODE_FUNCTION = "Weight"
 NODE_VERSION = "Light"
 NODE_EMOJI = "⚖"
 

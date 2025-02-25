@@ -10,8 +10,6 @@ Note:
     Install via ComfyUI Manager (“Install Custom Nodes” → “Force of Will Suite Light”) or clone from GitHub (https://github.com/SirWillance/FoW_Suite_LIGHT). Help me level up on Twitch (https://www.twitch.tv/sirwillance) for free `FoW_Suite_Standard` (€15) via Discord (https://discord.gg/BHSxf8HB)!
 """
 
-from ...config.category import get_category
-
 class WeightNode:
     """
     Base class for all weight-related nodes in the Force of Will Suite Light tier.
@@ -23,7 +21,7 @@ class WeightNode:
     RETURN_TYPES = ("CONDITIONING",)
     FUNCTION = "apply_weight"  # The spell to boost prompt influence
     CATEGORY = get_category("3")  # Category for weight nodes in Light tier
-    DESCRIPTION = """Increases the influence of your prompt by adjusting the weight—your guild’s armor for Light tier, no sliders (Pro/Ultimate only)."""
+    DESCRIPTION = """Increases the influence of your prompt by adjusting the weight—your guild’s armor for Light tier"""
 
     @classmethod
     def INPUT_TYPES(cls):

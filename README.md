@@ -10,6 +10,15 @@ Welcome to the **FoW Suite** (Force of Will)—your ultimate gaming-inspired nod
 - [Installation](#installation)
 - [Quick Start with `PromptRefinerLight`](#quick-start-with-promptrefinerlight)
 - [Nodes in FoW_Suite_LIGHT](#nodes-in-fow_suitelight)
+
+Welcome to the **FoW Suite**, a user-friendly node suite designed for beginners and experienced users alike! Whether you’re just starting out or already a coding wizard, this suite has something for everyone. Developing this suite took me 2 month without any prior knowledge of coding or what ComfyUI is capable of. If u encounter any severe bugs feel free to join in on my stream and tell me
+ ---   https://www.twitch.tv/sirwillance   ---
+
+## Table of Contents
+- [What is the FoW Suite?](#what-is-the-fow-suite)
+- [Key Features](#key-features)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
 - [Documentation](#documentation)
 - [Troubleshooting](#troubleshooting)
 - [Join the Community](#join-the-community)
@@ -26,6 +35,7 @@ The suite also includes supporting nodes for prompt refinement, weights, and age
 ---
 
 ## Key Features
+
 - **PromptRefinerLight**:
   - Enter Positive and Negative prompts in a draggable, resizable modal.
   - Save prompts as `.txt` files (e.g., newline-separated Positive/Negative) for cross-platform collaboration.
@@ -34,6 +44,9 @@ The suite also includes supporting nodes for prompt refinement, weights, and age
 - **Supporting Nodes**: Streamlined nodes for prompt splitting, fusion, conditioning weights, and agent/villain roles (see [Nodes in FoW_Suite_LIGHT](#nodes-in-fow_suitelight)).
 - **QoL Features**: Drag, resize, collapse for ease of use.
 - **Beginner-Friendly**: Gaming-inspired tone, clear alerts, and defaults for beginners.
+- **TextLoaderCombiner**: Load and combine text files with ease.
+- **TokenSelector**: Select and manage tokens for your workflows.
+- **UIClone**: Clone UI elements for faster prototyping.
 
 ---
 
@@ -112,6 +125,19 @@ Here’s the full list of nodes in the light suite, all designed for simplicity 
 
 All nodes are streamlined for ease of use, focusing on raw prompts and simple conditioning, with no advanced features like tokenization or drag-and-drop.
 
+1. Download the FoW Suite from the repository.
+2. Copy the `FoW-Suite-LIGHT` folder into your ComfyUI `custom_nodes` directory.
+3. Restart ComfyUI.
+4. The FoW Suite nodes should now be available in your node list.
+
+---
+
+## Quick Start
+1. Drag the `TextLoaderCombiner` node into your workspace.
+2. Connect it to a text input node.
+3. Run the workflow to see the combined text output.
+
+
 ---
 
 ## Documentation
@@ -125,6 +151,9 @@ Dive deeper into `FoW_Suite_LIGHT` with our epic guides:
 - **[Contribution_Guide](docs/Contribution_Guide.md)**: Join the guild and contribute to `FoW_Suite_LIGHT`!
 - **[Development_Journey](docs/Development_Journey.md)**: Learn my 2-month quest to build `FoW_Suite_LIGHT` from scratch.
 
+For detailed instructions on each node, check out the [FoW Suite Documentation](docs/).
+
+
 ---
 
 ## Troubleshooting
@@ -132,6 +161,8 @@ Dive deeper into `FoW_Suite_LIGHT` with our epic guides:
   **Solution**: Ensure the `FoW_Suite_LIGHT` folder is in `custom_nodes/` and restart ComfyUI. Check [Troubleshooting](docs/Troubleshooting.md) for more.
 - **Issue**: Prompts not saving correctly in `PromptRefinerLight`.
   **Solution**: Verify `.txt` files use newline-separated Positive/Negative prompts. See [FAQs](docs/FAQs.md) for path issues.
+
+
 
 ---
 
@@ -153,3 +184,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Achievement Unlocked: FoW Suite Light Adventurer
 You’ve mastered `FoW_Suite_LIGHT`! Keep exploring, contributing, and crafting amazing workflows in ComfyUI with `PromptRefinerLight` and its supporting nodes. 🚀🎮
+
+

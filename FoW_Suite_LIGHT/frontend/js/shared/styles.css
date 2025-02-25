@@ -1,0 +1,345 @@
+/* --- START OF FILE styles.css --- */
+
+/* --- ============================ BASE STYLES ============================ --- */
+:root {
+  --fow-modal-background: #333333;
+  --fow-modal-text: #ffffff;
+  --fow-modal-accent: #79c257;
+  --fow-modal-accent-hover: #66a34a;
+  --fow-modal-border: #555;
+  --fow-modal-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --fow-token-background: #444444;
+
+  /* Collapsed/Expanded dimensions - make sure these match the JS config */
+  --fow-modal-collapse-width: 320px;
+  --fow-modal-expand-width: 420px;
+  --fow-modal-expand-height: 200px;
+}
+
+/* --- ============================ GENERAL MODAL STYLES ============================ --- */
+.fow-modal {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  background-color: var(--fow-modal-background);
+  border-radius: 12px;
+  box-shadow: var(--fow-modal-box-shadow);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  color: var(--fow-modal-text);
+  font-family: sans-serif;
+  width: var(--fow-modal-expand-width); /* Use CSS variable for initial width */
+  height: var(--fow-modal-expand-height); /* Use CSS variable for initial height */
+  min-width: var(--fow-modal-expand-width); /* Use variable */
+  min-height: var(--fow-modal-expand-height); /* Use variable */
+  max-height: 80vh;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+/* --- ============================ TITLE BAR STYLES ============================ --- */
+.fow-modal__titlebar { /* BEM naming */
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--fow-modal-border);
+  cursor: grab;
+  padding-left: 40px;
+  border-color: #101010;
+  height: 40px;
+  background-color: var(--fow-modal-background);
+}
+
+.fow-modal__titlebar h3 { /* BEM naming */
+  flex-grow: 1;
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #808080;
+}
+
+/* --- ============================ CLOSE BUTTON STYLES ============================ --- */
+.fow-modal__close { /* BEM naming */
+  background: none;
+  border: none;
+  color: var(--fow-modal-text);
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 10px;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  outline: none;
+}
+
+.fow-modal__close:hover { /* BEM naming */
+  opacity: 1;
+}
+
+/* --- ============================ MODAL Collapse STYLES ============================ --- */
+.fow-modal__collapse { /* BEM naming */
+  background: none;
+  border: none;
+  color: var(--fow-modal-text);
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  outline: none;
+  margin-right: 5px;
+}
+
+.fow-modal__collapse:hover { /* BEM naming */
+  opacity: 1;
+}
+
+
+/* --- ============================ MODAL CONTENT STYLES ============================ --- */
+.modal-content {
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  overflow-y: auto;
+  /* min-height: 200px;  Removed */
+}
+
+.fow-modal-content-wrapper {
+  height: 100%;
+  overflow: auto;
+  background-color: var(--fow-modal-background); /* Corrected variable name */
+  color: var(--fow-modal-text);
+}
+
+/* --- ============================ OPERATION WINDOW STYLES ============================ --- */
+.operation-window {
+  position: sticky;
+  top: 0;
+  background-color: #202020;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-radius: 50px;
+  z-index: 10;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- ============================ CONTROL WINDOW STYLES ============================ --- */
+.control-window {
+  position: sticky;
+  background-color: #555;
+  padding: 1px;
+  margin-bottom: 10px;
+  border: 1px solid var(--fow-modal-border);
+}
+
+#selected-token-output {
+  white-space: pre-line;
+  margin: 0;
+  font-size: 0.9em;
+  color: #ccc;
+  background-color: #202020;
+  padding: 15px;
+}
+
+/* --- ============================ SEARCH BAR STYLES ============================ --- */
+.operation-window .search-bar {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  background-color: #555;
+  color: #ccc;
+  outline: none;
+
+}
+
+.operation-window .search-bar:focus {
+  border-color: #999;
+  box-shadow: none;
+}
+
+/* --- ============================ BUTTON GROUP STYLES ============================ --- */
+.operation-window .button-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- ============================ BUTTON STYLES ============================ --- */
+.fow-modal .modal-content .operation-window .button-group button {
+ /* Existing styles */
+ border-radius: 50%;
+ width: 30px;
+ height: 30px;
+ text-align: center;
+ transform: scale(1.05);
+ transition: background-color 0.2s ease, transform 0.1s ease;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+
+.fow-modal .modal-content .operation-window .button-group .confirm-button {
+  background-color: #127015;
+  color: white;
+}
+
+.fow-modal .modal-content .operation-window .button-group button.confirm-button:hover {
+  background-color: #45a049;
+}
+
+.fow-modal .modal-content .operation-window .button-group .deselect-all-button {
+  background-color: #8a1d16;
+  color: white;
+}
+
+.fow-modal .modal-content .operation-window .button-group button.deselect-all-button:hover {
+  background-color: #da190b;
+}
+
+.fow-modal .modal-content .operation-window .button-group .file-button {
+  background-color: #1e2772;
+  color: #101010;
+}
+
+.fow-modal .modal-content .operation-window .button-group button.file-button:hover {
+  background-color: #3333ff;
+}
+
+
+/* --- ============================ CATEGORIES CONTAINER STYLES ============================ --- */
+.categories-container {
+  margin-top: 12px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* --- ============================ CATEGORY STYLES ============================ --- */
+.category {
+  margin-bottom: 10px;
+  border: 1px solid var(--fow-modal-border);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.category h4 {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #ddd;
+  padding: 8px;
+  background-color: #444;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.category h4:hover {
+  background-color: #555;
+}
+
+/* --- ============================ STYLES CONTAINER STYLES ============================ --- */
+.styles-container {
+  margin-top: 12px;
+}
+
+/* --- ============================ STYLE ITEM STYLES ============================ --- */
+.style-item {
+  margin-bottom: 5px;
+  padding-left: 15px;
+}
+
+.style-item label {
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  border-bottom: 1px solid var(--fow-modal-border);
+  transition: background-color 0.2s ease;
+}
+
+.style-item label:hover {
+  background-color: #555;
+}
+
+.style-item label:hover {
+  background-color: #555;
+}
+
+/* --- ============================ TOKENS LIST STYLES ============================ --- */
+.tokens-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: flex-start;
+}
+
+/* --- ============================ TOKEN LIST ITEM STYLES ============================ --- */
+.tokens-list li {
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1px;
+  background-color: var(--fow-token-background);
+  transition: background-color 0.2s ease;
+  font-size: 0.85em;
+  display: inline-block;
+  white-space: nowrap;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 4px;
+  margin-top: 4px;
+}
+
+.tokens-list li:hover {
+  background-color: #666;
+}
+
+.tokens-list li.token-enabled {
+  background-color: var(--fow-modal-accent);
+  color: var(--fow-modal-text);
+}
+
+/* --- ============================ RESIZE HANDLE STYLES ============================ --- */
+
+.fow-modal-resize-handle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  cursor: se-resize;
+  z-index: 1002;
+  border-radius: 2px;
+}
+
+.fow-modal-resize-handle:hover {
+  background-color: #999;
+}
+
+
+
+/* --- ============================ UTILITY CLASSES ============================ --- */
+.hidden {
+  display: none !important;
+}
+
+/* --- END OF FILE styles.css --- */

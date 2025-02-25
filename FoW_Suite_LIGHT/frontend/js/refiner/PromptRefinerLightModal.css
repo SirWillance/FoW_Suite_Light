@@ -1,0 +1,307 @@
+:root {
+  --prl-modal-background: #333333; /* Dark gray background */
+  --prl-modal-text: #ffffff; /* White text */
+  --prl-modal-border: #555; /* Dark border color */
+  --prl-modal-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Consistent shadow */
+  --prl-modal-accent-red: #da190b; /* Clear All (Red) */
+  --prl-modal-accent-orange: #f3c429; /* Save (Orange) */
+  --prl-modal-accent-green: #45a049; /* Confirm (Green) */
+  --prl-button-hover-background: #777; /* Button hover background */
+  --prl-button-hover-color: #fff; /* Button hover text color */
+  --prl-operation-window-button-size: 30px; /* Button size */
+}
+
+/* --- ============================ GENERAL MODAL STYLES ============================ --- */
+.prl-modal {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  background-color: var(--prl-modal-background);
+  border-radius: 12px;
+  box-shadow: var(--prl-modal-box-shadow);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  color: var(--prl-modal-text);
+  font-family: sans-serif;
+  overflow: hidden;
+  height:590px
+}
+
+/* --- ============================ TITLE BAR STYLES ============================ --- */
+.prl-modal-titlebar {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--prl-modal-border);
+  cursor: grab;
+  padding-left: 40px;
+  border-color: #101010;
+  height: 40px;
+  background-color: #202020;
+  }
+
+.prl-modal-titlebar h3 {
+  flex-grow: 1;
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #808080;
+}
+
+.prl-modal-close {
+  background: none;
+  border: none;
+  color: var(--prl-modal-text);
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 10px;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  outline: none;
+}
+
+.prl-modal-close:hover {
+  opacity: 1;
+}
+
+.prl-modal-collapse {
+  background: none;
+  border: none;
+  color: var(--prl-modal-text);
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  outline: none;
+  margin-right: 5px;
+}
+
+.prl-modal-collapse:hover {
+  opacity: 1;
+}
+
+/* --- ============================ OPERATION WINDOW STYLES (Updated) ============================ --- */
+.prl-operation-window {
+  position: sticky;
+  top: 0;
+  background-color: #202020;
+  padding: 5px 20px;
+  margin-bottom: 5px;
+  border-radius: 50px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between checkbox and buttons */
+}
+
+.prl-alert-toggle-label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Add spacing between checkbox and buttons */
+  color: var(--prl-modal-text);
+  font-size: 0.9em;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.prl-alert-toggle-label:hover {
+  opacity: 1;
+}
+
+.prl-alert-toggle {
+  margin-right: 5px;
+  cursor: pointer;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--prl-modal-text);
+  border-radius: 4px;
+  background-color: #404040;
+  position: relative;
+}
+
+.prl-alert-toggle:checked {
+  background-color: blue;
+  border-color: var(--prl-modal-accent-green);
+}
+
+.prl-alert-toggle:checked::after {
+  content: "✓";
+  color: var(--prl-modal-text);
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Ensure buttons stay aligned and spaced correctly */
+.prl-button-group {
+  display: flex;
+  align-items: center;
+}
+
+.prl-modal .prl-operation-window .prl-button-group button {
+  border-radius: 50%;
+  width: var(--prp-operation-window-button-size);
+  height: var(--prp-operation-window-button-size);
+  text-align: center;
+  transform: scale(1.05);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 1em;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prl-save {
+  background-color: #f3c429; /* Orange */
+  color: white !important;
+  opacity: 0.7;
+}
+
+.prl-clear-all {
+  background-color: #da190b; /* Red */
+  color: white !important;
+  opacity: 0.7;
+}
+
+.prl-confirm {
+  background-color: #45a049; /* Green */
+  color: white !important;
+  opacity: 0.7;
+}
+
+.prl-modal .prl-operation-window .prl-button-group button:hover {
+  opacity: 1;
+}
+
+/* --- ============================ Top-level category STYLES ============================ --- */
+.prl-prompt-category-container {
+  margin-bottom: 20px;
+  border: 1px solid var(--prl-modal-border);
+  border-radius: 10px;
+  background-color: #202020;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.prl-prompt-category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #303030;
+  border-bottom: 1px solid var(--prl-modal-border);
+  cursor: pointer;
+}
+
+.prl-prompt-category-header h3 {
+  color: var(--prl-modal-text);
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.prl-prompt-category-header:hover {
+  background-color: #383838;
+}
+
+.prl-prompt-category-label {
+  color: var(--prl-modal-text);
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.prl-prompt-category-content {
+  padding: 15px;
+}
+
+.prl-prompt-category-content.collapsed {
+  display: none;
+}
+
+/* --- ============================ INPUT STYLES ============================ --- */
+.prl-modal-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto; /* Make content scrollable */
+}
+
+.prl-input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.prl-input-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 8px;
+  border: 1px solid var(--prl-modal-border);
+  border-radius: 4px;
+  background-color: #404040;
+  color: var(--prl-modal-text);
+  font-size: 14px;
+  resize: vertical;
+  flex-grow: 1;
+}
+
+.prl-clear-input {
+  background: none;
+  border: none;
+  color: var(--prl-modal-text);
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.prl-clear-input:hover {
+  opacity: 1;
+}
+
+/* --- ============================ RESIZE HANDLE STYLES ============================ --- */
+.prl-modal-resize-handle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  cursor: se-resize;
+}
+
+.prl-modal-resize-handle:hover {
+  opacity: 1;
+  border-color: transparent #999;
+
+}
+
+/* --- ============================ UTILITY CLASSES ============================ --- */
+@media (max-width: 768px) {
+  .prl-modal {
+      min-width: 90%;
+      min-height: 200px; /* Match minimum height */
+  }
+
+  .prl-prompt-category-container {
+      margin-bottom: 15px;
+  }
+
+  .prl-input-textarea {
+      padding: 6px;
+      min-height: 50px;
+  }
+}

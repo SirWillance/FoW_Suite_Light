@@ -1,48 +1,61 @@
-# Contribution Guide: Join the FoW Suite Guild!
+# Contribution Guide: Join the Force of Will Guild!
 
-Welcome to the FoW Suite community! We're excited to have you join our guild of code adventurers. Here’s how you can help:
+Welcome to the Force of Will community! We’re excited to have you join our guild of code adventurers for `FoW_Suite_LIGHT` and beyond. Here’s how you can help shape `PromptRefinerLight`, Standard, Pro, and Ultimate tiers in ComfyUI. 🚀🎮
 
 ---
 
 ## Reporting Bugs: Squash Those Pesky Critters!
-1.  **Check Existing Issues**: Before reporting a new bug, make sure that someone else hasn't already slayed that beast! Check if the issue has already been reported on our issue tracker.
-2.  **Create a New Issue**: If the bug is new, create a new issue and include:
-    *   A clear description of the bug, like you’re telling a story.
-    *   Steps to reproduce it, like instructions to complete a level.
-    *   Any error messages, like clues that will lead us to the bug's lair.
-    *  A descriptive title, using the affected nodes name.
-[Report Bugs](https://github.com/user/repo/issues)
+1. **Check Existing Issues**: Before reporting, see if the bug’s already been squashed in our [GitHub Issues](https://github.com/SirWillance/FoW_Suite_LIGHT/issues).
+2. **Create a New Issue**: If it’s new, create an issue with:
+   - A clear description (e.g., “`PromptRefinerLight` modal freezes on save”).
+   - Steps to reproduce (e.g., “Enter a prompt, click 💾, see UI lag”).
+   - Any error messages from ComfyUI’s console or browser (e.g., `404`, JavaScript errors).
+   - Use a descriptive title (e.g., “PromptRefinerLight: Save Button Freeze”).
 
 ---
 
 ## Suggesting Features: Share Your Ideas for New Power-Ups!
-
-1.  **Check Existing Suggestions**: See if your idea has already been proposed in the list of issues.
-2.  **Create a New Issue**: If it's a new idea, create a new issue with a descriptive title and:
-    *   A description of the feature, explaining what it does.
-    *   Explain *why* it would be useful, and how it would improve gameplay.
-[Suggest features](https://github.com/user/repo/issues)
+1. **Check Existing Suggestions**: Look for similar ideas in [GitHub Issues](https://github.com/SirWillance/FoW_Suite_LIGHT/issues).
+2. **Create a New Issue**: If it’s new, propose it with:
+   - A description (e.g., “Add drag-and-drop for prompts in `PromptRefinerPro`”).
+   - Why it’s useful for ComfyUI users (e.g., “Improves prompt organization for pros”).
+   - How it fits tiers (e.g., “For Pro/Ultimate with customized tokens”).
 
 ---
 
 ## Submitting Code: Become a Code Champion!
-
-1.  **Fork the Repository**:  This is like creating your own copy of the game world.
-2.  **Create a Branch**: Make your changes in a new branch. It's like creating your own save game to experiment.
-3.  **Submit a Pull Request**:  Describe your changes and provide all steps needed to test and implement them, and also make a reference to the bug that you are trying to fix or the feature you implemented.
-[Submit a pull request](https://github.com/user/repo/pulls)
+1. **Fork the Repository**: Clone your own copy of [FoW_Suite_LIGHT](https://github.com/SirWillance/FoW_Suite_LIGHT).
+2. **Create a Branch**: Make changes in a new branch (e.g., `feature/prompt-refiner-drag-drop` for Pro).
+3. **Submit a Pull Request**: Describe your changes, test steps, and reference the related issue (e.g., “Fixes #123, adds drag-and-drop to `PromptRefinerPro`”). Include:
+   - Steps to test (e.g., “Enable tokenization, drag a prompt, verify order updates”).
+   - Code changes in `backend/nodes/`, `frontend/`, or `docs/`.
 
 ---
 
 ## Code Guidelines: Level Up Your Coding Skills!
-*   **Follow the Existing Style**: Keep your code neat, clean and easy to read.
-*   **Comment Your Code**: Explain why your code does something, not just what it does.
-*   **Test Thoroughly**: Always verify your code before submit it and make sure it works as you intended.
-*  **Code Format:** Make sure to follow the same code style conventions used for the project, use clear and concise naming for all the variables.
-* **Use a Linter:** if you are planning to contribute code please use a tool such as `pylint` or `eslint` to ensure that your code is correctly formatted before submitting.
+- **Follow the Existing Style**: Match Python (e.g., PEP 8) and JavaScript (e.g., Airbnb) conventions in `FoW_Suite_LIGHT`.
+- **Comment Your Code**: Explain *why* (e.g., “Simplify `PromptRefinerLight` for newbies”)—see [Legends](Legends.md).
+- **Test Thoroughly**: Verify changes in ComfyUI (e.g., test `PromptRefinerLight` modal, weights, file I/O).
+- **Code Format**: Use clear, concise names (e.g., `promptText` for `PromptRefinerLight`).
+- **Use a Linter**: For Python, use `pylint` or `flake8`:
+
+  pip install pylint
+  pylint backend/nodes/*.py
+
+For JavaScript, use eslint:
+
+npm install eslint -g
+eslint frontend/*.js
+Add .eslintrc.json and .pylintrc in the root for consistency.
+
 
 ---
 
-## Thank You!
-Your contributions help make FoW Suite better for everyone. Thank you for being part of the community!
-"""
+Boost My Twitch Channel!
+Help me level up on Twitch (https://www.twitch.tv/sirwillance) to gain Affiliate status faster:
+
+Stream with FoW_Suite_LIGHT in ComfyUI to showcase PromptRefinerLight.
+Follow my channel—the first 50 followers get free FoW_Suite_Standard (€15) via Discord.
+Contribute code or report bugs during streams to earn guild points for Pro/Ultimate features!
+Thank You!
+Your contributions make FoW_Suite_LIGHT better for everyone, especially ComfyUI users. Thank you for being part of the community! 🚀🎮

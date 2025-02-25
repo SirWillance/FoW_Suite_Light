@@ -82,7 +82,7 @@ Check [How_to_Use_FoW_Suite.md](docs/How_to_Use_FoW_Suite.md) for step-by-step w
 Want to help me level up my Twitch channel (`https://www.twitch.tv/sirwillance`) and gain Affiliate status faster? The first 50 followers on my Twitch channel will get **free access** to `FoW_Suite_Standard` (€15 value) via my [Discord server](https://discord.gg/BHSxf8HB)! Here’s how:
 
 - Follow my Twitch channel to join the guild and unlock `FoW_Suite_Standard`, including all Light nodes with predefined library access (no customized tokens).
-- Stream regularly (500+ minutes, 7+ days, 3+ viewers in 30 days) to help me meet Twitch Affiliate requirements (50 followers minimum, plus streaming/engagement goals).
+- Watch my Stream regularly (500+ minutes, 7+ days, 3+ viewers in 30 days) to help me meet Twitch Affiliate requirements (50 followers minimum, plus streaming/engagement goals).
 - Engage on Discord to share workflows, report bugs, and suggest features—I’ll use your feedback to improve `FoW_Suite` and grow my community.
 
 Check [Gamers_Corner](docs/Gamers_Corner.md) for tips on streaming success and [Contribution_Guide](docs/Contribution_Guide.md) to contribute to `FoW_Suite`.

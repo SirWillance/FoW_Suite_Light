@@ -59,3 +59,8 @@ Follow my channel—the first 50 followers get free FoW_Suite_Standard (€15) v
 Contribute code or report bugs during streams to earn guild points for Pro/Ultimate features!
 Thank You!
 Your contributions make FoW_Suite_LIGHT better for everyone, especially ComfyUI users. Thank you for being part of the community! 🚀🎮
+
+---
+
+## Commercial Use Policy
+The **Force of Will Suite** is licensed under the MIT License, allowing free modification and distribution, including for commercial purposes, as long as the copyright notice and license are included. If you’re using this code commercially, we’d love your support! Upgrade to `FoW_Suite_Standard` (€15) or `FoW_Suite_Pro` (€25) for official features, or join my [Twitch stream](https://www.twitch.tv/sirwillance) to help me level up and earn free access via [Discord](https://discord.gg/BHSxf8HB).
